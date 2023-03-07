@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["form", "input", "list"]
 
   connect() {
-    console.log("Connect to controller")
   }
 
   update() {
@@ -14,6 +13,7 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       this.listTarget.outerHTML = data
+      console.log(data)
     })
   }
 }
